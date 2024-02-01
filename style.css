@@ -2,6 +2,10 @@ body {
     background-color: #21262C;
 }
 
+h1 {
+    color: #FEFEFE;
+}
+
 .container {
     width: 100%;
 }
