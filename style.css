@@ -18,3 +18,11 @@ h1 {
 .container {
     width: 100%;
 }
+
+.label {
+    margin: 0 25px;
+    background: #FF9A23;
+    padding: 0px 15px;
+    border-radius: 15px;
+    font-size: 25px;
+}
