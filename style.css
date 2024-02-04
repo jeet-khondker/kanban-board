@@ -37,3 +37,7 @@ h4 {
     width: 100%;
     text-align: center;
 }
+
+#backlog-header, #ready-header, #progress-header, #review-header {
+    color: #FEFEFE;
+}
