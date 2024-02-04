@@ -41,3 +41,8 @@ h4 {
 #backlog-header, #ready-header, #progress-header, #review-header {
     color: #FEFEFE;
 }
+
+.drag-drop-container {
+    display: flex;
+    height: 100%;
+}
