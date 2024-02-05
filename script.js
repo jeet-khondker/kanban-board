@@ -7,3 +7,8 @@ const drop = (event) => {
 const allowdrop = (event) => {
     
 }
+
+// Function : Task Drag Function
+const drag = (event) => {
+    
+}
