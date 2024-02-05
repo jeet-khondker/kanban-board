@@ -3,7 +3,7 @@ const drop = (event) => {
     
 }
 
-// Function : Task Drag Over Function
+// Function : Allow Task to Drop Function
 const allowdrop = (event) => {
     
 }
