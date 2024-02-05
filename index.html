@@ -20,16 +20,16 @@
             <h4 id="review-header">In Review</h4>
         </section>
         <section class="drag-drop-container">
-            <section class="col3" ondrop="drop(event)" ondragover="allowdrop(event)">
+            <section class="col3" id="backlog" ondrop="drop(event)" ondragover="allowdrop(event)">
                 <p class="task" id="task1" draggable="true" ondragstart="drag(event)">Task 1</p>
                 <p class="task" id="task2" draggable="true" ondragstart="drag(event)">Task 2</p>
                 <p class="task" id="task3" draggable="true" ondragstart="drag(event)">Task 3</p>
                 <p class="task" id="task4" draggable="true" ondragstart="drag(event)">Task 4</p>
                 <p class="task" id="task5" draggable="true" ondragstart="drag(event)">Task 5</p>
             </section>
-            <section class="col3" ondrop="drop(event)" ondragover="allowdrop(event)"></section>
-            <section class="col3" ondrop="drop(event)" ondragover="allowdrop(event)"></section>
-            <section class="col3" ondrop="drop(event)" ondragover="allowdrop(event)"></section>
+            <section class="col3" id="ready" ondrop="drop(event)" ondragover="allowdrop(event)"></section>
+            <section class="col3" id="in-progress" ondrop="drop(event)" ondragover="allowdrop(event)"></section>
+            <section class="col3" id="in-review" ondrop="drop(event)" ondragover="allowdrop(event)"></section>
         </section>
     </main>
     <script src="script.js"></script>
