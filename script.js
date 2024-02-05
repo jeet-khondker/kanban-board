@@ -1,6 +1,7 @@
 // Function : Task Drop Function
 const drop = (event) => {
-    
+    event.preventDefault();
+    let taskID = event.dataTransfer.getData("text");
 }
 
 // Function : Allow Task to Drop Function
