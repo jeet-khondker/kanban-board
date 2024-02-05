@@ -10,5 +10,5 @@ const allowdrop = (event) => {
 
 // Function : Task Drag Function
 const drag = (event) => {
-    
+    event.dataTransfer.setData("text", event.target.id);
 }
