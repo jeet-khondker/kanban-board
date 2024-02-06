@@ -7,6 +7,7 @@ const drop = (event) => {
     if (event.target.id.includes("task")) return;
 
     event.target.appendChild(document.getElementById(taskID));
+    updateTasksCount();
 }
 
 // Function : Allow Task to Drop Function
@@ -25,14 +26,28 @@ const updateTasksCount = () => {
     const backlogColumn = document.getElementById("backlog");
     const readyColumn = document.getElementById("ready");
     const inProgressColumn = document.getElementById("in-progress");
-    const inReviewedColumn = document.getElementById("in-review");
+    const inReviewColumn = document.getElementById("in-review");
 
     const backlogHeader = document.getElementById("backlog-header");
     const readyHeader = document.getElementById("ready-header");
     const inProgressHeader = document.getElementById("progress-header");
-    const inReviewedHeader = document.getElementById("review-header");
+    const inReviewHeader = document.getElementById("review-header");
 
-    backlogHeader.innerText = `${ backlogHeader.innerText.split(" ")[0]}${ backlogColumn.children.length } ${ backlogColumn.children.length > 1 ? "Tasks" : "Task" }`;
+    const backlogTasksCount = backlogColumn.children.length;
+    const backlogTaskCondition = backlogTasksCount > 1 ? "Tasks" : "Task";
+    backlogHeader.innerText = `Backlog (${backlogTasksCount} ${backlogTaskCondition})`;
+
+    const readyTasksCount = readyColumn.children.length;
+    const readyTaskCondition = readyTasksCount > 1 ? "Tasks" : "Task";
+    readyHeader.innerText = `Ready (${readyTasksCount} ${readyTaskCondition})`;
+
+    const inProgressTasksCount = inProgressColumn.children.length;
+    const inProgressTaskCondition = inProgressTasksCount > 1 ? "Tasks" : "Task";
+    inProgressHeader.innerText = `In Progress (${inProgressTasksCount} ${inProgressTaskCondition})`;
+
+    const inReviewTasksCount = inReviewColumn.children.length;
+    const inReviewTaskCondition = inReviewTasksCount > 1 ? "Tasks" : "Task";
+    inReviewHeader.innerText = `In Review (${inReviewTasksCount} ${inReviewTaskCondition})`;
 }
 
 updateTasksCount();
