@@ -33,21 +33,17 @@ const updateTasksCount = () => {
     const inProgressHeader = document.getElementById("progress-header");
     const inReviewHeader = document.getElementById("review-header");
 
-    const backlogTasksCount = backlogColumn.children.length;
-    const backlogTaskCondition = backlogTasksCount > 1 ? "Tasks" : "Task";
-    backlogHeader.innerText = `Backlog (${backlogTasksCount} ${backlogTaskCondition})`;
+    updateHeader("Backlog", backlogHeader, backlogColumn);
+    updateHeader("Ready", readyHeader, readyColumn);
+    updateHeader("In Progress", inProgressHeader, inProgressColumn);
+    updateHeader("In Review", inReviewHeader, inReviewColumn);
+}
 
-    const readyTasksCount = readyColumn.children.length;
-    const readyTaskCondition = readyTasksCount > 1 ? "Tasks" : "Task";
-    readyHeader.innerText = `Ready (${readyTasksCount} ${readyTaskCondition})`;
-
-    const inProgressTasksCount = inProgressColumn.children.length;
-    const inProgressTaskCondition = inProgressTasksCount > 1 ? "Tasks" : "Task";
-    inProgressHeader.innerText = `In Progress (${inProgressTasksCount} ${inProgressTaskCondition})`;
-
-    const inReviewTasksCount = inReviewColumn.children.length;
-    const inReviewTaskCondition = inReviewTasksCount > 1 ? "Tasks" : "Task";
-    inReviewHeader.innerText = `In Review (${inReviewTasksCount} ${inReviewTaskCondition})`;
+// Function : Update Header
+const updateHeader = (title, header, column) => {
+    const taskCount = column.children.length;
+    const taskCondition = taskCount > 1 ? "Tasks" : "Task";
+    header.innerHTML = `${title} (<span style="color: #FF9A23">${taskCount} ${taskCondition}</span>)`;
 }
 
 updateTasksCount();
